@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sim Racing pour Seniors</title>
+<title>Sim Racing pour Seniors – Stimulez votre mémoire et vos réflexes</title>
 
+<!-- ✅ SEO -->
 <meta name="description" content="Le Sim Racing pour seniors : stimulez vos réflexes, votre attention et votre mémoire tout en vous amusant.">
+<meta name="keywords" content="sim racing, seniors, mémoire, réflexes, cognition, jeux vidéo seniors, coordination">
+<link rel="canonical" href="https://jeanpaulpoignand-web.github.io/-simracing-seniors/">
+
+<!-- ✅ Open Graph (réseaux sociaux) -->
+<meta property="og:title" content="Sim Racing pour Seniors">
+<meta property="og:description" content="Stimulez votre mémoire, vos réflexes et votre attention grâce au Sim Racing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jeanpaulpoignand-web.github.io/-simracing-seniors/">
 
 <style>
 body{font-family:Arial,sans-serif;margin:0;background:#f0f8ff;color:#333;line-height:1.6}
@@ -16,23 +26,26 @@ h1{font-size:2.8em;margin:0}
 h2{color:#0066cc;text-align:center;margin:40px 0}
 
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin:30px 0}
-.card{background:#e6f3ff;padding:25px;border-radius:12px;text-align:center;transition:.3s}
 
-/* ✅ CARTE CENTRALE CLIQUABLE */
-.card-center{
+article.card{background:#e6f3ff;padding:25px;border-radius:12px;text-align:center;transition:.3s}
+
+/* ✅ BOUTON CENTRAL EN RELIEF */
+button.card-center{
 background:linear-gradient(145deg,#dbeafe,#bfdbfe);
 border:2px solid #2563eb;
 cursor:pointer;
-box-shadow:0 10px 30px rgba(0,0,0,.25);
-transform:scale(1.04);
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+transform:scale(1.08);
+padding:25px;
+border-radius:15px;
 }
 
-.card-center:hover{
-transform:scale(1.10);
-box-shadow:0 15px 45px rgba(0,0,0,.35);
+button.card-center:hover{
+transform:scale(1.12);
+box-shadow:0 18px 50px rgba(0,0,0,.45);
 }
 
-.card-center::after{
+button.card-center::after{
 content:"Cliquez pour vérifier les études";
 display:block;
 margin-top:12px;
@@ -41,24 +54,66 @@ font-weight:bold;
 color:#1e40af;
 }
 
-.testimonial{background:#fff8e1;padding:25px;margin:40px 0;border-left:6px solid #ffb300;font-style:italic;text-align:center;font-size:1.1em}
+@media (hover:none){
+  button.card-center::after{
+    content:"Touchez pour vérifier les études";
+  }
+}
 
-iframe{width:100%;height:400px;border-radius:12px;margin:40px auto;max-width:800px;display:block}
+blockquote.testimonial{
+background:#fff8e1;
+padding:25px;
+margin:40px 0;
+border-left:6px solid #ffb300;
+font-style:italic;
+text-align:center;
+font-size:1.1em
+}
+
+iframe{
+width:100%;
+height:400px;
+border-radius:12px;
+margin:40px auto;
+max-width:800px;
+display:block
+}
 
 .form{text-align:center;margin:70px 0}
 form{max-width:520px;margin:0 auto;background:#f8fbff;padding:40px;border-radius:18px;box-shadow:0 8px 25px rgba(0,0,0,.15)}
 input{width:100%;padding:16px;margin:12px 0;border-radius:10px;border:1px solid #ccc;font-size:1.1em}
 
-.magic-button{background:#00cc00;color:white;padding:20px 60px;font-size:1.6em;border:none;border-radius:60px;cursor:pointer;
+.magic-button{
+background:#00cc00;
+color:white;
+padding:20px 60px;
+font-size:1.6em;
+border:none;
+border-radius:60px;
+cursor:pointer;
 box-shadow:0 8px 25px rgba(0,204,0,.4);
 animation:pulse 2s infinite;
-transition:all .3s}
+transition:all .3s
+}
 
-.magic-button:hover{transform:scale(1.08);box-shadow:0 12px 35px rgba(0,204,0,.6)}
+.magic-button:hover{
+transform:scale(1.08);
+box-shadow:0 12px 35px rgba(0,204,0,.6)
+}
 
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,204,0,.7)}70%{box-shadow:0 0 0 15px rgba(0,204,0,0)}100%{box-shadow:0 0 0 0 rgba(0,204,0,0)}}
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(0,204,0,.7)}
+70%{box-shadow:0 0 0 15px rgba(0,204,0,0)}
+100%{box-shadow:0 0 0 0 rgba(0,204,0,0)}
+}
 
-footer{background:#0066cc;color:white;text-align:center;padding:35px;font-size:1.1em}
+footer{
+background:#0066cc;
+color:white;
+text-align:center;
+padding:35px;
+font-size:1.1em
+}
 
 .study-links a{
 display:inline-block;
@@ -68,7 +123,7 @@ background:#2563eb;
 color:white;
 border-radius:8px;
 text-decoration:none;
-font-size:14px;
+font-size:14px
 }
 
 .study-links a:hover{background:#1e40af}
@@ -87,52 +142,51 @@ Maintenez vos réflexes · Stimulez votre attention · Amusez-vous
 </p>
 </header>
 
-<div class="container">
+<main class="container">
 
 <h2>Pourquoi de plus en plus de seniors choisissent le Sim Racing</h2>
 
-<div class="cards">
+<section class="cards">
 
-<div class="card">
+<article class="card">
 <h3>Réflexes & coordination</h3>
 <p>Freiner, accélérer, anticiper : vous mobilisez vos réflexes visuels et moteurs.</p>
-</div>
+</article>
 
-<!-- ✅ CARTE CENTRALE CLIQUABLE -->
-<div class="card card-center" onclick="document.getElementById('etudes').scrollIntoView({behavior:'smooth'});">
+<!-- ✅ BOUTON CENTRAL PRO -->
+<button class="card-center" onclick="document.getElementById('etudes').scrollIntoView({behavior:'smooth'});" aria-label="Voir les études sur la stimulation de la mémoire">
 <h3>Stimulation de la mémoire</h3>
 <p>La simulation sollicite l’attention, la mémoire de travail et la rapidité de décision.</p>
-</div>
+</button>
 
-<div class="card">
+<article class="card">
 <h3>Fun & convivial</h3>
 <p>Clubs, défis, passion commune : une activité moderne et sociale.</p>
-</div>
+</article>
 
-</div>
+</section>
 
-<div class="testimonial">
+<blockquote class="testimonial">
 « À la retraite, j’ai retrouvé une activité motivante et je partage maintenant de vrais moments de jeu avec mes proches. »
-</div>
+</blockquote>
 
 <h2>Des seniors en pleine course</h2>
-<iframe src="https://www.youtube.com/embed/LRyLu1no9go" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/LRyLu1no9go" loading="lazy" title="Seniors en Sim Racing" allowfullscreen></iframe>
 
 <h2>Ma session Sim Racing en cockpit réel</h2>
-<iframe src="https://drive.google.com/file/d/1WfYp9eyyAUw1THP49onIh5uIJENWRLmw/preview" allowfullscreen></iframe>
+<iframe src="https://drive.google.com/file/d/1WfYp9eyyAUw1THP49onIh5uIJENWRLmw/preview" loading="lazy" title="Session Sim Racing cockpit" allowfullscreen></iframe>
 
-<!-- ✅ SECTION ÉTUDES -->
 <section id="etudes">
 <h2>Études & sources sur mémoire et cognition</h2>
 
 <p style="text-align:center">
-Ces publications scientifiques présentent les effets des jeux vidéo et de la simulation sur la mémoire, l’attention et les fonctions cognitives :
+Ces publications présentent les effets des jeux vidéo et de la simulation sur la mémoire et l’attention :
 </p>
 
 <div class="study-links" style="text-align:center">
-<a href="https://pubmed.ncbi.nlm.nih.gov/38365701/" target="_blank">Jeux vidéo & mémoire (2024)</a>
-<a href="https://pubmed.ncbi.nlm.nih.gov/29927277/" target="_blank">Fonctions exécutives & jeux vidéo</a>
-<a href="https://pubmed.ncbi.nlm.nih.gov/31185800/" target="_blank">Entraînement cognitif & seniors</a>
+<a href="https://pubmed.ncbi.nlm.nih.gov/38365701/" target="_blank" rel="noopener noreferrer">Jeux vidéo & mémoire (2024)</a>
+<a href="https://pubmed.ncbi.nlm.nih.gov/29927277/" target="_blank" rel="noopener noreferrer">Fonctions exécutives & jeux vidéo</a>
+<a href="https://pubmed.ncbi.nlm.nih.gov/31185800/" target="_blank" rel="noopener noreferrer">Entraînement cognitif & seniors</a>
 </div>
 
 <p style="font-size:12px;color:#666;text-align:center;margin-top:15px;">
@@ -146,7 +200,7 @@ Passionné de simulation automobile, j’ai créé ce site pour partager une act
 ludique et accessible aux seniors. Ce projet est personnel et ne remplace aucun avis médical.
 </p>
 
-<div class="form">
+<section class="form">
 <h2>Recevez gratuitement le guide "Sim Racing après 60 ans"</h2>
 
 <form action="https://formspree.io/f/mldqwbaw" method="POST">
@@ -159,9 +213,9 @@ Vos données sont utilisées uniquement pour l’envoi du guide.
 Conformément au RGPD, vous pouvez demander leur suppression à tout moment.
 </p>
 </form>
-</div>
+</section>
 
-</div>
+</main>
 
 <footer>
 © 2025 Sim Racing Seniors – Projet personnel d’information et de loisir<br>
