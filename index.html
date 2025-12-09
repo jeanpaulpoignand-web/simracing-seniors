@@ -6,369 +6,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Le sim racing après 60 ans stimule la mémoire, l'attention et la coordination. Études scientifiques, matériel et guide gratuit.">
 
-  <!-- SEO & SOCIAL -->
   <link rel="canonical" href="https://jeanpaulpoignand-web.github.io/-simracing-seniors/">
-  <meta property="og:title" content="Sim Racing Seniors – Stimulez votre cerveau après 60 ans">
-  <meta property="og:description" content="Mémoire, attention, coordination : découvrez les bienfaits du sim racing pour les seniors.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jeanpaulpoignand-web.github.io/-simracing-seniors/">
 
-  <!-- FAVICON -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🏎️</text></svg>">
-
-  <!-- FONTS (optimisées) -->
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    :root{
-      --bg-dark:#020617;
-      --card-bg:rgba(255,255,255,.08);
-      --border-soft:rgba(255,255,255,.15);
-      --text-main:#f8fafc;
-      --text-soft:#cbd5e1;
-      --accent1:#f97316;
-      --accent2:#fb923c;
-      --accent-deep:#1e1b4b;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:#020617;color:#f8fafc}
+main{max-width:1200px;margin:auto;padding:0 20px}
 
-    body{
-      font-family:Inter,sans-serif;
-      background:var(--bg-dark);
-      color:var(--text-main);
-      scroll-behavior:smooth;
-    }
-    /* Fond animé uniquement après chargement pour la perf */
-    body.loaded{
-      background:linear-gradient(-45deg,#020617,#0f172a,#1e1b4b,#020617);
-      background-size:400% 400%;
-      animation:bg 20s ease infinite;
-    }
-    @keyframes bg{
-      0%{background-position:0 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0 50%}
-    }
+nav{position:sticky;top:0;background:#020617;padding:15px;z-index:1000}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:Poppins;font-size:1.4rem;font-weight:800;color:#fb923c}
+nav ul{display:flex;gap:20px;list-style:none}
+nav a{color:#fff;text-decoration:none}
 
-    /* NAVIGATION */
-    nav{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(2,6,23,.95);
-      backdrop-filter:blur(15px);
-      padding:12px 15px;
-      border-bottom:1px solid rgba(255,255,255,.1)
-    }
-    nav .container{
-      max-width:1200px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center
-    }
-    nav .logo{
-      font-family:Poppins,sans-serif;
-      font-weight:800;
-      font-size:1.4rem;
-      background:linear-gradient(45deg,var(--accent1),var(--accent2));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent
-    }
-    nav ul{
-      display:flex;
-      gap:30px;
-      list-style:none
-    }
-    nav a{
-      text-decoration:none;
-      color:#cbd5e1;
-      font-weight:500;
-      font-size:.95rem;
-      transition:color .25s
-    }
-    nav a:hover{color:var(--accent2)}
+section{margin:70px auto;padding:35px;background:rgba(255,255,255,.07);border-radius:30px}
 
-    #burger{
-      display:none;
-      background:none;
-      border:none;
-      font-size:2rem;
-      color:#e5e7eb;
-      cursor:pointer
-    }
+h1,h2,h3{font-family:Poppins}
+h1{font-size:2.4rem;margin-bottom:15px}
+h2{font-size:2rem;margin-bottom:20px}
 
-    /* LAYOUT */
-    main{max-width:1200px;margin:auto;padding:0 20px}
-    section{
-      margin:80px auto;
-      padding:50px;
-      background:var(--card-bg);
-      border-radius:30px;
-      border:1px solid var(--border-soft);
-      box-shadow:0 0 60px rgba(0,0,0,.5)
-    }
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
 
-    /* TITRES */
-    h1,h2,h3{font-family:Poppins,sans-serif}
-    h1{
-      font-size:clamp(2rem,5vw,3rem);
-      margin-bottom:1rem
-    }
-    h2{
-      font-size:clamp(1.6rem,4vw,2.4rem);
-      margin-bottom:1.5rem
-    }
-    h3{
-      color:var(--accent2);
-      font-size:1.2rem;
-      margin-bottom:.5rem
-    }
-    p{color:var(--text-soft);line-height:1.6;font-size:1rem;margin-bottom:.4rem}
+/* ✅ ✅ ✅ BOUTON GOUTTE D’EAU 3D UNIFIÉ ✅ ✅ ✅ */
+.btn{
+  display:inline-block;
+  padding:18px 50px;
+  border-radius:60px;
+  font-weight:700;
+  color:#000;
+  text-decoration:none;
+  background:linear-gradient(145deg,#ffb347,#ff7a18);
+  box-shadow:
+    inset 0 2px 5px rgba(255,255,255,.6),
+    inset 0 -4px 8px rgba(0,0,0,.3),
+    0 10px 20px rgba(0,0,0,.4);
+  transition:all .2s ease;
+}
+.btn:hover{
+  transform:translateY(-2px);
+}
+.btn:active{
+  transform:translateY(4px);
+  box-shadow:
+    inset 0 4px 8px rgba(0,0,0,.4),
+    0 4px 10px rgba(0,0,0,.3);
+}
 
-    /* HERO */
-    .hero{
-      text-align:center;
-      background:linear-gradient(135deg,rgba(249,115,22,.18),rgba(30,64,175,.22));
-      border:2px solid rgba(249,115,22,.35)
-    }
+/* Cartes */
+.card{
+  padding:30px;
+  border-radius:25px;
+  background:rgba(255,255,255,.08);
+  text-align:center;
+  font-weight:600;
+}
 
-    /* BOUTONS : effet goutte d’eau / 3D */
-    .btn{
-      display:inline-block;
-      margin:20px 8px 0;
-      padding:14px 36px;
-      border-radius:999px;
-      border:none;
-      font-weight:700;
-      font-size:1rem;
-      color:#020617;
-      cursor:pointer;
-      text-decoration:none;
-      position:relative;
-      overflow:hidden;
+/* Vidéos */
+.video-container{
+  position:relative;
+  padding-bottom:56.25%;
+  background:linear-gradient(135deg,#0f172a,#020617);
+  border-radius:25px;
+  overflow:hidden;
+}
+iframe{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border:none;
+}
 
-      background:radial-gradient(circle at 20% 0,#ffe7c4 0,rgba(255,255,255,.1) 40%,transparent 60%),
-                 linear-gradient(135deg,var(--accent1),var(--accent2));
-      box-shadow:
-        0 14px 28px rgba(0,0,0,.55),
-        0 0 0 1px rgba(255,255,255,.18);
-      transition:transform .18s ease-out,box-shadow .18s ease-out,filter .18s ease-out
-    }
-    .btn::before{
-      content:"";
-      position:absolute;
-      inset:3px;
-      border-radius:999px;
-      background:linear-gradient(to bottom,rgba(255,255,255,.55),rgba(255,255,255,.08) 55%,rgba(0,0,0,.05));
-      opacity:.9;
-      mix-blend-mode:screen;
-      pointer-events:none
-    }
-    .btn span{
-      position:relative;
-      z-index:1
-    }
-    .btn::after{
-      content:"";
-      position:absolute;
-      top:18%;
-      left:22%;
-      width:26%;
-      height:40%;
-      border-radius:999px;
-      background:radial-gradient(circle at 30% 0,rgba(255,255,255,.9),rgba(255,255,255,0));
-      opacity:.85;
-      filter:blur(1px);
-      pointer-events:none
-    }
-    .btn:hover{
-      transform:translateY(-3px);
-      box-shadow:
-        0 18px 34px rgba(0,0,0,.65),
-        0 0 0 1px rgba(255,255,255,.22);
-      filter:saturate(1.1)
-    }
-    .btn:active{
-      transform:translateY(0);
-      box-shadow:
-        0 8px 16px rgba(0,0,0,.6),
-        0 0 0 1px rgba(255,255,255,.18)
-    }
+/* Form */
+form{max-width:450px;margin:auto;display:flex;flex-direction:column;gap:15px}
+input{
+  padding:15px;
+  border-radius:15px;
+  border:none;
+  background:#1e293b;
+  color:#fff;
+}
 
-    /* GRILLES & CARTES */
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-      margin-top:2rem
-    }
-
-    .card,
-    .science-card,
-    .sim-card{
-      padding:25px;
-      border-radius:25px;
-      background:rgba(15,23,42,.9);
-      border:1px solid rgba(148,163,184,.45);
-      box-shadow:0 10px 30px rgba(15,23,42,.8);
-      transition:transform .2s,box-shadow .2s,border-color .2s;
-      text-decoration:none;
-      color:inherit
-    }
-    .card:hover,
-    .science-card:hover,
-    .sim-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 16px 38px rgba(15,23,42,.95);
-      border-color:rgba(249,115,22,.7)
-    }
-
-    .science-card{
-      display:block;
-      font-size:1.05rem;
-      font-weight:500
-    }
-    .card{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:100px;
-      font-size:1.15rem;
-      font-weight:600;
-      text-align:center
-    }
-    .sim-card h3{margin-bottom:.7rem}
-    .sim-card p{margin-bottom:.5rem}
-    .sim-card-links{
-      margin-top:.6rem
-    }
-    .sim-chip{
-      display:inline-block;
-      margin:6px 4px 0;
-      padding:9px 16px;
-      border-radius:999px;
-      font-size:.9rem;
-      color:#e5e7eb;
-      text-decoration:none;
-      position:relative;
-      overflow:hidden;
-      background:linear-gradient(135deg,#020617,#0b1120);
-      box-shadow:0 10px 24px rgba(0,0,0,.7);
-      border:1px solid rgba(148,163,184,.6);
-      transition:transform .18s,box-shadow .18s,border-color .18s
-    }
-    .sim-chip::before{
-      content:"";
-      position:absolute;
-      inset:2px;
-      border-radius:999px;
-      background:linear-gradient(to bottom,rgba(255,255,255,.25),rgba(15,23,42,.9));
-      opacity:.9;
-      pointer-events:none
-    }
-    .sim-chip span{
-      position:relative;
-      z-index:1
-    }
-    .sim-chip:hover{
-      transform:translateY(-3px);
-      border-color:rgba(249,115,22,.7);
-      box-shadow:0 16px 32px rgba(0,0,0,.8)
-    }
-
-    /* VIDÉOS */
-    .video-section p{margin-bottom:1rem}
-    .video-container{
-      position:relative;
-      width:100%;
-      padding-bottom:56.25%;
-      margin-top:20px;
-      border-radius:20px;
-      overflow:hidden;
-      background:#000;
-      box-shadow:0 14px 36px rgba(0,0,0,.7)
-    }
-    iframe{
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      border:none;
-      border-radius:20px
-    }
-    /* Vidéo Google Drive : zoom pour masquer les bandes noires */
-    .video-drive{
-      background:radial-gradient(circle at top,#1d2448,#020617);
-    }
-    .video-drive iframe{
-      width:120%;
-      height:120%;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
-    }
-
-    /* FORMULAIRE */
-    form{
-      display:flex;
-      flex-direction:column;
-      gap:15px;
-      max-width:500px;
-      margin:0 auto
-    }
-    form input{
-      padding:14px 16px;
-      border-radius:12px;
-      border:1px solid rgba(148,163,184,.7);
-      background:rgba(15,23,42,.8);
-      color:#e5e7eb;
-      font-size:1rem;
-      font-family:Inter,sans-serif;
-      box-shadow:inset 0 0 0 1px rgba(15,23,42,.9);
-    }
-    form input::placeholder{color:#94a3b8}
-
-    footer{
-      text-align:center;
-      padding:40px 20px;
-      color:#94a3b8;
-      font-size:.9rem
-    }
-
-    /* RESPONSIVE */
-    @media(max-width:768px){
-      nav ul{
-        display:none;
-        position:absolute;
-        top:58px;
-        left:0;
-        right:0;
-        background:rgba(2,6,23,.98);
-        flex-direction:column;
-        padding:18px 20px;
-        gap:14px;
-        border-bottom:1px solid rgba(255,255,255,.1)
-      }
-      nav ul.active{display:flex}
-      #burger{display:block}
-      section{padding:26px 20px;margin:40px 15px}
-      .grid{grid-template-columns:1fr}
-      .btn{width:100%;text-align:center}
-    }
-  </style>
+footer{text-align:center;padding:40px;color:#94a3b8;margin-top:40px}
+</style>
 </head>
 
-<body id="top">
+<body>
 
 <nav>
   <div class="container">
     <div class="logo">Sim Racing Seniors</div>
-    <button id="burger" aria-label="Menu de navigation" aria-expanded="false">☰</button>
-    <ul id="menu">
+    <ul>
       <li><a href="#science">Science</a></li>
       <li><a href="#bienfaits">Bienfaits</a></li>
       <li><a href="#materiel">Matériel</a></li>
@@ -380,171 +112,69 @@
 
 <main>
 
-<!-- HERO -->
-<section class="hero">
+<section class="card">
   <h1>Le Sim Racing après 60 ans</h1>
-  <p>Stimulez votre mémoire, vos réflexes et votre concentration grâce au simulateur automobile, depuis votre salon.</p>
-  <a class="btn" href="#guide"><span>📩 Recevoir le guide gratuit</span></a>
+  <p>Stimulez votre mémoire, vos réflexes et votre concentration.</p><br>
+  <a class="btn" href="#guide">Recevoir le guide gratuit</a>
 </section>
 
-<!-- SCIENCE -->
 <section id="science">
-  <h2>Ce que dit la science</h2>
-  <p>Des études et articles sérieux montrent que les jeux vidéo peuvent freiner le déclin cognitif chez les seniors, améliorer l’attention et soutenir la motivation.</p>
-  <div class="grid">
-    <a class="science-card" target="_blank" rel="noopener noreferrer" href="https://institut.amelis-services.com/bien-vieillir/bien-etre/jeux-video-une-activite-benefique-pour-les-seniors/">
-      🧠 Institut Amelis – Jeux vidéo & bien vieillir
-    </a>
-    <a class="science-card" target="_blank" rel="noopener noreferrer" href="https://www.lemonde.fr/technologies/article/2013/05/02/les-jeux-video-freinent-le-declin-mental-des-seniors_3169347_651865.html">
-      📉 Le Monde – Les jeux vidéo freinent le déclin mental
-    </a>
-    <a class="science-card" target="_blank" rel="noopener noreferrer" href="https://www.femina.fr/article/e-sport-quels-sont-les-bienfaits-de-jouer-aux-jeux-video">
-      🎮 Femina – Bienfaits de l’e-sport et des jeux vidéo
-    </a>
-  </div>
+<h2>Ce que dit la science</h2>
+<div class="grid">
+  <a class="btn" href="https://institut.amelis-services.com/bien-vieillir/bien-etre/jeux-video-une-activite-benefique-pour-les-seniors/" target="_blank">Institut Amelis</a>
+  <a class="btn" href="https://www.lemonde.fr/technologies/article/2013/05/02/les-jeux-video-freinent-le-declin-mental-des-seniors_3169347_651865.html" target="_blank">Le Monde</a>
+  <a class="btn" href="https://www.femina.fr/article/e-sport-quels-sont-les-bienfaits-de-jouer-aux-jeux-video" target="_blank">Femina</a>
+</div>
 </section>
 
-<!-- BIENFAITS -->
 <section id="bienfaits">
-  <h2>Bienfaits concrets du sim racing</h2>
-  <p>Le sim racing est un “jeu sérieux” : vous vous amusez, mais votre cerveau travaille réellement.</p>
-  <div class="grid">
-    <a class="card" target="_blank" rel="noopener noreferrer" href="https://www.lemonde.fr/technologies/article/2013/05/02/les-jeux-video-freinent-le-declin-mental-des-seniors_3169347_651865.html">
-      💭 Mémoire
-    </a>
-    <a class="card" target="_blank" rel="noopener noreferrer" href="https://institut.amelis-services.com/bien-vieillir/bien-etre/jeux-video-une-activite-benefique-pour-les-seniors/">
-      👁️ Attention
-    </a>
-    <a class="card" target="_blank" rel="noopener noreferrer" href="https://www.femina.fr/article/e-sport-quels-sont-les-bienfaits-de-jouer-aux-jeux-video">
-      🤝 Coordination
-    </a>
-    <a class="card" target="_blank" rel="noopener noreferrer" href="https://www.pourlascience.fr/theme/alzheimer/combattre-le-declin-cerebral-24687.php">
-      💪 Confiance
-    </a>
-  </div>
+<h2>Bienfaits concrets</h2>
+<div class="grid">
+  <a class="btn" href="https://www.lemonde.fr/">Mémoire</a>
+  <a class="btn" href="https://institut.amelis-services.com/">Attention</a>
+  <a class="btn" href="https://www.femina.fr/">Coordination</a>
+  <a class="btn" href="https://www.pourlascience.fr/">Confiance</a>
+</div>
 </section>
 
-<!-- MATÉRIEL -->
 <section id="materiel">
-  <h2>Choisir son simulateur selon son budget</h2>
-  <p>Trois niveaux possibles, du simple “poste salon” au simulateur haut de gamme.</p>
-  <div class="grid">
-    <div class="sim-card">
-      <h3>🎮 Niveau 1 – Découverte (~1000 €)</h3>
-      <p>Console ou PC + volant + pédalier + TV. Idéal pour tester, s’amuser et déjà travailler les réflexes.</p>
-      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.thrustmaster.com/fr-fr/products/t598-x/">
-        <span>Voir un volant Thrustmaster</span>
-      </a>
-    </div>
-
-    <div class="sim-card">
-      <h3>🏁 Niveau 2 – Passionné (2000–5000 €)</h3>
-      <p>Châssis rigide, siège, volant plus puissant et pédalier précis. Confort et immersion renforcés.</p>
-      <div class="sim-card-links">
-        <a class="sim-chip" target="_blank" rel="noopener noreferrer" href="https://thefrenchsimracer.com/products/sim-lab-p1x-ultimate-cockpit">
-          <span>🪑 Châssis Sim-Lab P1X</span>
-        </a>
-        <a class="sim-chip" target="_blank" rel="noopener noreferrer" href="https://thefrenchsimracer.com/collections/simagic-simracing-bundles">
-          <span>🎛️ Bundles Simagic</span>
-        </a>
-        <a class="sim-chip" target="_blank" rel="noopener noreferrer" href="https://thefrenchsimracer.com/collections/pedaliers-simagic">
-          <span>🦶 Pédaliers Simagic</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="sim-card">
-      <h3>🏆 Niveau 3 – Premium (&gt;8000 €)</h3>
-      <p>Simulateur complet clé en main : structure alu, écrans ou VR, électronique haut de gamme, installation sur mesure.</p>
-      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://lpsimu.fr/pages/nos-realisations">
-        <span>Voir les réalisations LP SIMU</span>
-      </a>
-    </div>
-  </div>
+<h2>Choisir son simulateur</h2>
+<div class="grid">
+  <a class="btn" href="https://www.thrustmaster.com/fr-fr/products/t598-x/" target="_blank">Niveau 1</a>
+  <a class="btn" href="https://thefrenchsimracer.com/" target="_blank">Niveau 2</a>
+  <a class="btn" href="https://lpsimu.fr/" target="_blank">Niveau 3</a>
+</div>
 </section>
 
-<!-- VIDÉOS -->
-<section id="temoignages" class="video-section">
-  <h2>Vidéos témoignages</h2>
-  <p>Deux exemples concrets de seniors au volant d’un simulateur.</p>
+<section id="temoignages">
+<h2>Vidéos</h2>
 
-  <!-- Vidéo DRIVE (gros zoom + fond dégradé pour masquer les bandes) -->
-  <div class="video-container video-drive">
-    <iframe
-      loading="lazy"
-      src="https://drive.google.com/file/d/1FVVfOB11RWrAFdqBaWd3SW8PfMX3Ewks/preview"
-      title="Témoignage sim racing senior – Google Drive"
-      allow="autoplay">
-    </iframe>
-  </div>
+<div class="video-container">
+  <iframe loading="lazy" src="https://drive.google.com/file/d/1FVVfOB11RWrAFdqBaWd3SW8PfMX3Ewks/preview"></iframe>
+</div>
 
-  <!-- Vidéo YouTube (ratio déjà propre) -->
-  <div class="video-container">
-    <iframe
-      loading="lazy"
-      src="https://www.youtube.com/embed/FPUWLgBmXjA"
-      title="Témoignage YouTube sim racing senior"
-      allowfullscreen>
-    </iframe>
-  </div>
+<br>
+
+<div class="video-container">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/FPUWLgBmXjA"></iframe>
+</div>
+
 </section>
 
-<!-- GUIDE -->
 <section id="guide">
-  <h2>📩 Recevoir le guide gratuit</h2>
-  <p>Un petit guide simple pour démarrer : matériel, réglages de base, sécurité et astuces pour progresser sans stress.</p>
-  <form action="https://formspree.io/f/xandroke" method="POST" id="guide-form">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="prenom" placeholder="Votre prénom" required aria-label="Prénom">
-    <input type="email" name="email" placeholder="Votre email" required aria-label="Email">
-    <button class="btn" type="submit"><span>Recevoir le guide</span></button>
-  </form>
-</section>
-
-<!-- TEXTE CONTEXTE SANTÉ -->
-<section>
-  <h2>Sim racing et santé cognitive après 60 ans</h2>
-  <p>
-    Le sim racing pour seniors est une activité ludique qui stimule la mémoire, l’attention,
-    la coordination et la confiance en soi. En combinant concentration, prise de décision rapide
-    et plaisir de conduire, il participe à entretenir le cerveau de manière douce et régulière.
-  </p>
-  <p>
-    Cette pratique ne remplace pas un avis médical et s’intègre dans une hygiène de vie globale :
-    marche, activités sociales, alimentation équilibrée et sommeil de qualité.
-  </p>
+<h2>Recevoir le guide gratuit</h2>
+<form action="https://formspree.io/f/xandroke" method="POST">
+  <input type="text" name="prenom" placeholder="Votre prénom" required>
+  <input type="email" name="email" placeholder="Votre email" required>
+  <button class="btn" type="submit">Recevoir le guide</button>
+</form>
 </section>
 
 </main>
 
 <footer>
-  © 2025 Sim Racing Seniors — Projet d’information sans valeur médicale.
+© 2025 Sim Racing Seniors — Information non médicale
 </footer>
-
-<script>
-  // Menu burger
-  const burger = document.getElementById('burger');
-  const menu = document.getElementById('menu');
-  burger.onclick = () => {
-    const active = menu.classList.toggle('active');
-    burger.setAttribute('aria-expanded', active ? 'true' : 'false');
-  };
-
-  // Fond animé après chargement (perf + effet premium)
-  window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-  });
-
-  // Validation simple du formulaire
-  document.getElementById('guide-form').addEventListener('submit', e => {
-    const email = e.target.email.value.trim();
-    const prenom = e.target.prenom.value.trim();
-    if (!prenom || !email || !email.includes('@')) {
-      e.preventDefault();
-      alert('Merci de saisir votre prénom et un email valide.');
-    }
-  });
-</script>
 
 </body>
 </html>
