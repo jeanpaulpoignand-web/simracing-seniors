@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Sim Racing Seniors – Stimulez votre mémoire après 60 ans</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Le sim racing après 60 ans : stimule la mémoire, l'attention et la coordination. Guide gratuit, matériel adapté et témoignages.">
+  <meta name="description" content="Le sim racing après 60 ans : stimule la mémoire, l'attention et la coordination. Guide gratuit et matériel adapté.">
   <meta name="google-site-verification" content="7639e3d6d97af44" />
   <meta property="og:title" content="Sim Racing Seniors – Le simulateur automobile après 60 ans">
   <meta property="og:description" content="Stimulez votre cerveau en toute sécurité avec le sim racing. Guide gratuit à l’intérieur.">
@@ -20,16 +20,15 @@
     body.loaded{background:radial-gradient(circle at top,#111827 0,#020617 55%,#020617 100%)}
     a{text-decoration:none;color:inherit}
 
-    /* === BARRE SHAZAM AMÉLIORÉE === */
-    nav{position:sticky;top:0;z-index:1000;background:rgba(3,7,18,.94);backdrop-filter:blur(24px);border-bottom:1px solid rgba(148,163,184,.2);overflow:hidden}
-    .nav-inner{max-width:1200px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;position:relative}
+    /* === BARRE SHAZAM PARFAITE (goutte suit le doigt partout) === */
+    nav{position:sticky;top:0;z-index:1000;background:rgba(3,7,18,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(148,163,184,.15);overflow:hidden}
+    .nav-inner{max-width:1200px;margin:auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;position:relative}
     .brand{display:flex;align-items:center;gap:12px;font-family:Poppins,sans-serif;font-weight:700;font-size:1.35rem;color:#e0f2fe}
     .brand img{width:36px;height:36px}
-    .nav-tabs{display:flex;gap:36px;position:relative;padding:10px 0}
+    .nav-tabs{flex:1;display:flex;justify-content:center;gap:36px;position:relative;height:60px;align-items:center}
     .tab{color:#94a3b8;font-weight:600;font-size:1.05rem;padding:12px 20px;border-radius:30px;transition:color .3s;position:relative;z-index:2}
     .tab.active{color:#e0f2fe}
-    .blob{position:absolute;top:50%;width:100px;height:50px;background:radial-gradient(circle,#7dd3fc,#5eead4);border-radius:50%;transform:translateY(-50%) scale(0);transition:transform .5s cubic-bezier(0.2,0.8,0.2,1),left .5s;filter:blur(16px);opacity:.8;z-index:1}
-    .tab.active ~ .blob{transform:translateY(-50%) scale(1.8)}
+    .shazam-blob{position:absolute;top:50%;left:0;width:110px;height:110px;background:radial-gradient(circle at 30% 30%,#7dd3fc,#5eead4 70%);border-radius:50%;transform:translate(-50%,-50%) scale(0);transition:transform .45s cubic-bezier(0.2,0.8,0.2,1);filter:blur(20px);opacity:.85;pointer-events:none;z-index:1}
 
     main{max-width:1200px;margin:0 auto;padding:32px 24px 80px}
     .glass-section{background:rgba(15,23,42,.5);backdrop-filter:blur(14px);border-radius:32px;border:1px solid rgba(148,163,184,.35);box-shadow:0 25px 60px rgba(0,0,0,.6);padding:44px 36px;margin:44px 0;text-align:center}
@@ -37,33 +36,19 @@
     h1{font-size:clamp(2.3rem,5vw,3.2rem);margin-bottom:16px}
     h2{font-size:1.9rem;margin-bottom:28px}
 
-    /* === BOUTONS MAGNIFIQUES AVEC LOGO === */
-    .glass-btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:14px;
-      min-width:240px;padding:18px 36px;margin:14px;
-      background:radial-gradient(circle at 20% 0,rgba(255,255,255,.55),transparent 60%),radial-gradient(circle at 80% 120%,rgba(15,23,42,.7),#020617);
-      border:1px solid rgba(148,163,184,.6);border-radius:999px;
-      color:#fff;font-weight:600;font-size:1.1rem;
-      box-shadow:0 20px 40px rgba(15,23,42,.9),inset 0 0 16px rgba(255,255,255,.3);
-      transition:all .25s;position:relative;overflow:hidden;
-    }
-    .glass-btn img{width:26px;height:26px;filter:drop-shadow(0 0 8px #7dd3fc)}
-    .glass-btn:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 30px 50px rgba(15,23,42,1),inset 0 0 20px rgba(255,255,255,.4)}
-    .glass-btn:active{transform:scale(.96)}
+    /* Boutons verre liquide + logo */
+    .glass-btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-width:240px;padding:18px 36px;margin:14px;background:radial-gradient(circle at 20% 0,rgba(255,255,255,.55),transparent 60%),radial-gradient(circle at 80% 120%,rgba(15,23,42,.7),#020617);border:1px solid rgba(148,163,184,.6);border-radius:999px;color:#fff;font-weight:600;font-size:1.1rem;box-shadow:0 20px 40px rgba(15,23,42,.9),inset 0 0 16px rgba(255,255,255,.3);transition:all .25s}
+    .glass-btn img{width:26px;height:26px}
+    .glass-btn:hover{transform:translateY(-4px) scale(1.03)}
 
     .science-grid,.sim-grid,.video-list{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-top:28px}
     .video-toggle{max-width:560px;width:100%}
-
     .bienfaits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:28px;margin-top:28px;justify-items:center}
     .bienfait-card,.sim-card,.confiance{max-width:400px;padding:32px;border-radius:32px;background:rgba(15,23,42,.92);border:1px solid rgba(148,163,184,.5);text-align:left}
     .confiance{grid-column:1/-1;max-width:480px;justify-self:center}
 
     footer{padding:48px 20px;color:#64748b;text-align:center;font-size:.95rem}
-    @media(max-width:768px){
-      .nav-tabs{gap:18px;font-size:.95rem}
-      .glass-btn{min-width:200px;padding:16px 28px;font-size:1rem;gap:10px}
-      .glass-btn img{width:22px;height:22px}
-    }
+    @media(max-width:768px){.nav-tabs{gap:18px;font-size:.95rem}.glass-btn{min-width:200px;padding:16px 28px;font-size:1rem;gap:10px}.glass-btn img{width:22px;height:22px}}
   </style>
 </head>
 <body id="top">
@@ -73,13 +58,13 @@
     <div class="brand">
       <img src="glace.png" alt="Logo"> Sim Racing Seniors
     </div>
-    <div class="nav-tabs">
-      <a href="#science" class="tab active" data-section="science">Science</a>
-      <a href="#bienfaits" class="tab" data-section="bienfaits">Bienfaits</a>
-      <a href="#materiel" class="tab" data-section="materiel">Matériel</a>
-      <a href="#videos" class="tab" data-section="videos">Vidéos</a>
-      <a href="#guide" class="tab" data-section="guide">Guide</a>
-      <div class="blob"></div>
+    <div class="nav-tabs" id="navTabs">
+      <a href="#science" class="tab active">Science</a>
+      <a href="#bienfaits" class="tab">Bienfaits</a>
+      <a href="#materiel" class="tab">Matériel</a>
+      <a href="#videos" class="tab">Vidéos</a>
+      <a href="#guide" class="tab">Guide</a>
+      <div class="shazam-blob" id="blob"></div>
     </div>
   </div>
 </nav>
@@ -114,11 +99,7 @@
     <h2>Choisir son simulateur</h2>
     <div class="sim-grid">
       <div class="sim-card"><h3>Niveau 1 – 1000€</h3><a class="glass-btn" href="https://www.thrustmaster.com/fr-fr/products/t300rs-gt-edition/" target="_blank"><img src="glace.png" alt=""> Thrustmaster</a></div>
-      <div class="sim-card"><h3>Niveau 2 – 2000/5000€</h3>
-        <a class="glass-btn" href="https://thefrenchsimracer.com/products/sim-lab-p1x-ultimate-cockpit" target="_blank"><img src="glace.png" alt=""> Châssis</a>
-        <a class="glass-btn" href="https://thefrenchsimracer.com/collections/simagic-simracing-bundles" target="_blank"><img src="glace.png" alt=""> Bundles</a>
-        <a class="glass-btn" href="https://thefrenchsimracer.com/collections/pedaliers-simagic" target="_blank"><img src="glace.png" alt=""> Pédaliers</a>
-      </div>
+      <div class="sim-card"><h3>Niveau 2 – 2000/5000€</h3><a class="glass-btn" href="https://thefrenchsimracer.com/products/sim-lab-p1x-ultimate-cockpit" target="_blank"><img src="glace.png" alt=""> Châssis</a><a class="glass-btn" href="https://thefrenchsimracer.com/collections/simagic-simracing-bundles" target="_blank"><img src="glace.png" alt=""> Bundles</a><a class="glass-btn" href="https://thefrenchsimracer.com/collections/pedaliers-simagic" target="_blank"><img src="glace.png" alt=""> Pédaliers</a></div>
       <div class="sim-card"><h3>Niveau 3 – +10000€</h3><a class="glass-btn" href="https://lpsimu.fr/pages/nos-realisations" target="_blank"><img src="glace.png" alt=""> LP SIMU</a></div>
     </div>
   </section>
@@ -144,23 +125,53 @@
 <footer>© 2025 Sim Racing Seniors — Projet d’information, sans valeur médicale.</footer>
 
 <script>
-  window.addEventListener('load',()=>document.body.classList.add('loaded'));
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
 
-  // Nav liquide Shazam améliorée
-  document.querySelectorAll('.tab').forEach(tab=>{
-    tab.addEventListener('click',function(){
-      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-      this.classList.add('active');
-      const blob=document.querySelector('.blob');
-      const rect=this.getBoundingClientRect();
-      const navRect=document.querySelector('.nav-inner').getBoundingClientRect();
-      blob.style.left=(rect.left+rect.width/2-navRect.left)+'px';
+    const tabs = document.querySelectorAll('.tab');
+    const blob = document.getElementById('blob');
+    const navTabs = document.getElementById('navTabs');
+
+    const moveBlob = (e) => {
+      const rect = navTabs.getBoundingClientRect();
+      const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+      blob.style.left = x + 'px';
+      blob.style.transform = 'translate(-50%, -50%) scale(1.3)';
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function () {
+        tabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
     });
+
+    navTabs.addEventListener('mousemove', moveBlob);
+    navTabs.addEventListener('touchmove', moveBlob, {passive:true});
+    navTabs.addEventListener('mouseleave', () => {
+      const active = document.querySelector('.tab.active');
+      if (active) {
+        const rect = active.getBoundingClientRect();
+        const navRect = navTabs.getBoundingClientRect();
+        blob.style.left = (rect.left + rect.width/2 - navRect.left) + 'px';
+      }
+    });
+
+    // Position initiale
+    const activeTab = document.querySelector('.tab.active');
+    if (activeTab) {
+      const rect = activeTab.getBoundingClientRect();
+      const navRect = navTabs.getBoundingClientRect();
+      blob.style.left = (rect.left + rect.width/2 - navRect.left) + 'px';
+      blob.style.transform = 'translate(-50%, -50%) scale(1.3)';
+    }
   });
 
   // Vidéos
-  document.querySelectorAll('.video-toggle').forEach(btn=>{
-    btn.addEventListener('click',()=>{document.getElementById(btn.dataset.target).classList.toggle('hidden')});
+  document.querySelectorAll('.video-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById(btn.dataset.target).classList.toggle('hidden');
+    });
   });
 </script>
 </body>
