@@ -1,237 +1,142 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Sim Racing pour Seniors</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Sim Racing Seniors</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO minimum propre -->
-  <meta name="description" content="Le sim racing pour les seniors : réflexes, mémoire, attention et plaisir de jouer après 60 ans. Études accessibles et démonstrations.">
-  <meta name="keywords" content="sim racing seniors, mémoire, jeux vidéo, cognition, alzheimer, réflexes">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    body{font-family:Arial,sans-serif;margin:0;background:#f0f8ff;color:#333}
-    header{background:linear-gradient(#38bdf8,#0ea5e9);color:white;text-align:center;padding:70px 20px}
-    h1{font-size:2.6em;margin:0}
-    .container{max-width:1100px;margin:30px auto;padding:25px;background:white;border-radius:15px;box-shadow:0 5px 25px rgba(0,0,0,.15)}
-    h2{text-align:center;color:#0369a1;margin:40px 0}
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
-      margin:35px 0;
-    }
-    .card{
-      background:#e0f2fe;
-      padding:25px;
-      border-radius:18px;
-      text-align:center;
-      font-size:1.1em;
-      box-shadow:0 8px 20px rgba(0,0,0,.15);
-    }
-
-    /* ✅ BOUTON GOUTTE CENTRAL */
-    .goutte-etudes{
-      margin:30px auto;
-      width:260px;
-      height:200px;
-      background:radial-gradient(circle at 30% 30%, #e0f2fe, #38bdf8);
-      border-radius:55% 45% 50% 50%;
-      box-shadow:0 18px 40px rgba(0,0,0,.4), inset 0 10px 18px rgba(255,255,255,.8);
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      font-size:1.05em;
-      font-weight:bold;
-      color:#023047;
-      cursor:pointer;
-      border:3px solid #0284c7;
-      animation:respiration 3s infinite;
-      transition:.3s;
-    }
-    .goutte-etudes:hover{
-      transform:scale(1.12);
-      box-shadow:0 25px 50px rgba(0,0,0,.5);
-    }
-    @keyframes respiration{
-      0%{transform:scale(1)}
-      50%{transform:scale(1.07)}
-      100%{transform:scale(1)}
-    }
-
-    blockquote{
-      background:#fff7ed;
-      padding:25px;
-      border-left:6px solid #fb923c;
-      margin:40px 0;
-      font-style:italic;
-      text-align:center;
-      font-size:1.1em;
-    }
-
-    iframe{
-      width:100%;
-      height:400px;
-      border-radius:15px;
-      margin:40px 0;
-      max-width:800px;
-      display:block;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    .liens-etudes{
-      text-align:center;
-      margin-top:25px;
-    }
-    .liens-etudes a{
-      display:inline-block;
-      margin:10px;
-      padding:14px 20px;
-      background:#38bdf8;
-      color:white;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:bold;
-      box-shadow:0 8px 18px rgba(0,0,0,.25);
-      transition:.25s;
-    }
-    .liens-etudes a:hover{
-      transform:scale(1.08);
-      background:#0284c7;
-    }
-
-    .formulaire{text-align:center;margin:70px 0}
-    form{max-width:520px;margin:auto;background:#f0f9ff;padding:40px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.2)}
-    input{width:100%;padding:15px;margin:10px 0;border-radius:10px;border:1px solid #ccc;font-size:1.05em}
-
-    .bouton{
-      background:#22c55e;
-      color:white;
-      border:none;
-      padding:20px 60px;
-      border-radius:55px;
-      font-size:1.5em;
-      cursor:pointer;
-      box-shadow:0 10px 25px rgba(0,0,0,.3);
-      transition:.3s;
-    }
-    .bouton:hover{transform:scale(1.08)}
-
-    footer{
-      background:#0369a1;
-      color:white;
-      text-align:center;
-      padding:35px;
-      font-size:1.1em;
-    }
-  </style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Inter, sans-serif;
+  background: linear-gradient(-45deg,#020617,#0f172a,#020617);
+  background-size:400% 400%;
+  animation:bg 15s ease infinite;
+  color:#f8fafc;
+  scroll-behavior:smooth;
+}
+@keyframes bg{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+section{
+  max-width:1100px;
+  margin:120px auto;
+  padding:50px;
+  background:rgba(255,255,255,0.08);
+  border-radius:25px;
+  border:1px solid rgba(255,255,255,0.15);
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 50px rgba(0,0,0,.4);
+}
+h1,h2,h3{font-family:Poppins,sans-serif;}
+h1{font-size:3rem}
+h2{font-size:2.3rem;margin-bottom:20px}
+p{color:#cbd5e1;margin-bottom:15px}
+.btn{
+  display:inline-block;
+  padding:15px 40px;
+  background:linear-gradient(45deg,#f97316,#fb923c);
+  color:#020617;
+  font-weight:700;
+  border-radius:50px;
+  text-decoration:none;
+  transition:.3s;
+  margin-top:20px;
+}
+.btn:hover{transform:scale(1.05)}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.09);
+}
+iframe{border-radius:20px;width:100%;height:315px}
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:.7;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Sim Racing pour Seniors</h1>
-  <p>Rester vif · Stimuler la mémoire · Se faire plaisir après 60 ans</p>
-</header>
+<section>
+  <h1>Le Sim Racing Après 60 Ans</h1>
+  <p>Améliorez votre mémoire, vos réflexes et votre concentration… tout en vous faisant plaisir.</p>
+  <a class="btn" href="#guide">Recevoir le guide gratuit</a>
+</section>
 
-<div class="container">
-
-  <h2>Pourquoi de plus en plus de seniors pratiquent le Sim Racing</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Réflexes & coordination</h3>
-      <p>Anticipation, précision, temps de réaction visuel et moteur.</p>
-    </div>
-
-    <div class="goutte-etudes" onclick="document.getElementById('etudes').scrollIntoView({behavior:'smooth'})">
-      🧠<br>
-      Découvrir les études<br>
-      scientifiques
-    </div>
-
-    <div class="card">
-      <h3>Convivial & motivant</h3>
-      <p>Communautés, défis, plaisir, partage et stimulation sociale.</p>
-    </div>
-  </div>
-
-  <blockquote>
-    « À la retraite, j’ai retrouvé une activité stimulante et motivante. »
-  </blockquote>
-
-  <h2 id="etudes">🧠 Études accessibles sur jeux vidéo & cognition</h2>
-
-  <div class="liens-etudes">
-
-    <a href="https://institut.amelis-services.com/bien-vieillir/bien-etre/jeux-video-une-activite-benefique-pour-les-seniors/"
-       target="_blank" rel="noopener noreferrer">
-       Institut Amelis – Jeux vidéo & mémoire (2025)
-    </a>
-
-    <a href="https://loiclemeur.fr/jeux-video/comment-les-jeux-video-peuvent-ils-aider-a-ameliorer-les-capacites-cognitives-chez-les-adultes-ages/"
-       target="_blank" rel="noopener noreferrer">
-       Étude seniors 60+ – -29% risque démence
-    </a>
-
-    <a href="https://www.lesoleil.com/2019/06/22/les-jeux-video-pour-prevenir-le-declin-cognitif-chez-les-aines-56f8f8d000b02f837cc97d74c7f1fe60/"
-       target="_blank" rel="noopener noreferrer">
-       Étude NeuroRacer – Déclin cognitif & seniors
-    </a>
-  </div>
-
-  <p style="font-size:12px;color:#555;text-align:center;margin-top:15px">
-    Ces informations sont fournies à titre informatif. Ce site ne constitue pas un avis médical.
-  </p>
-
-  <div class="formulaire">
-    <h2>Recevoir le guide “Sim Racing après 60 ans”</h2>
-    <form action="https://formspree.io/f/mldqwbaw" method="POST">
-      <input type="text" name="prenom" placeholder="Votre prénom" required>
-      <input type="email" name="_replyto" placeholder="Votre email" required>
-      <button class="bouton">Recevez le guide</button>
-    </form>
-  </div>
-
-</div>
-
-<footer>
-  © 2025 Sim Racing Seniors – Projet personnel d'information.  
-  Ce site ne propose aucun avis médical.
-</footer>
-<section class="videos-seniors">
-  <h2>🎥 Témoignages de Seniors en Sim Racing</h2>
-
-  <div class="video-grid">
-
-    <div class="video-box">
-      <h3>Senior – Session personnelle en Sim Racing</h3>
-      <iframe 
-        src="https://drive.google.com/file/d/1FVVfOB11RWrAFdqBaWd3SW8PfMX3Ewks/preview"
-        width="100%" 
-        height="315"
-        allow="autoplay">
-      </iframe>
-    </div>
-
-    <div class="video-box">
-      <h3>Senior Français au volant – Sim Racing</h3>
-      <iframe 
-        width="100%" 
-        height="315"
-        src="https://www.youtube.com/embed/FPUWLgBmXjA"
-        title="Senior français en sim racing"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
+<section>
+  <h2>Ce que dit la science</h2>
+  <div class="grid">
+    <div class="card">🧠 Amélioration cognitive</div>
+    <div class="card">⚡ Réflexes renforcés</div>
+    <div class="card">👁️ Coordination visuelle</div>
+    <div class="card">😄 Motivation et plaisir</div>
   </div>
 </section>
+
+<section>
+  <h2>Les Bienfaits Concrets</h2>
+  <div class="grid">
+    <div class="card">Mémoire</div>
+    <div class="card">Attention</div>
+    <div class="card">Coordination</div>
+    <div class="card">Confiance en soi</div>
+  </div>
+</section>
+
+<section>
+  <h2>Témoignages Vidéo</h2>
+
+  <h3>Session personnelle</h3>
+  <iframe src="https://drive.google.com/file/d/1FVVfOB11RWrAFdqBaWd3SW8PfMX3Ewks/preview" allow="autoplay"></iframe>
+
+  <h3 style="margin-top:40px">Senior Français au volant</h3>
+  <iframe src="https://www.youtube.com/embed/FPUWLgBmXjA" allowfullscreen></iframe>
+</section>
+
+<section>
+  <h2>Pour qui ?</h2>
+  <p>✅ Seniors actifs</p>
+  <p>✅ Retraités</p>
+  <p>✅ Débutants complets</p>
+  <p>✅ Grands-parents connectés</p>
+</section>
+
+<section>
+  <h2>Sécurité & Simplicité</h2>
+  <p>✅ Utilisable assis</p>
+  <p>✅ Sans stress</p>
+  <p>✅ Pause à volonté</p>
+</section>
+
+<section id="guide">
+  <h2>Recevez votre guide gratuit</h2>
+
+  <form action="https://formspree.io/f/xandroke" method="POST">
+    <input type="text" name="prenom" placeholder="Votre prénom" required>
+    <br><br>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <br><br>
+    <button class="btn" type="submit">Recevoir le guide</button>
+  </form>
+
+  <p style="margin-top:15px">✅ Gratuit – ✅ Sans engagement – ✅ Envoi immédiat</p>
+</section>
+
+<footer>
+  © 2025 Sim Racing Seniors — Projet d'information. Ce site ne donne aucun avis médical.
+</footer>
+
 </body>
 </html>
