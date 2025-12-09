@@ -57,9 +57,9 @@
       border-bottom:1px solid rgba(148,163,184,.25);
     }
     .nav-inner{
-      max-width:1100px;
+      max-width:1200px; /* Augmenté pour plus d'espace */
       margin:auto;
-      padding:12px 18px;
+      padding:16px 24px; /* Padding cohérent */
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -80,7 +80,7 @@
     }
     .nav-links{
       display:flex;
-      gap:26px;
+      gap:32px; /* Plus d'espace pour clics faciles */
       list-style:none;
       font-size:1rem;
       font-weight:500;
@@ -88,7 +88,7 @@
     .nav-links a{
       color:#cbd5f5;
       position:relative;
-      padding:10px 16px; /* zones de clic plus grandes */
+      padding:10px 16px;
       display:inline-block;
       border-radius:8px;
       transition:background .2s,color .2s;
@@ -124,9 +124,9 @@
 
     /* LAYOUT GLOBAL */
     main{
-      max-width:1100px;
+      max-width:1200px; /* Aligné avec nav */
       margin:0 auto;
-      padding:24px 16px 60px;
+      padding:32px 24px 64px; /* Multiples de 8px */
     }
 
     .glass-section{
@@ -134,8 +134,9 @@
       border-radius:28px;
       border:1px solid rgba(148,163,184,.35);
       box-shadow:0 35px 80px rgba(15,23,42,.85);
-      padding:30px 22px 32px;
-      margin:26px 0;
+      padding:40px 32px; /* Padding cohérent */
+      margin:32px 0; /* Marges égales */
+      text-align:center; /* Tout centré par défaut */
     }
 
     h1,h2,h3{
@@ -145,24 +146,22 @@
     h1{
       font-size:clamp(2.1rem,4.3vw,2.8rem);
       color:#f9fafb;
-      margin-bottom:10px;
-      text-align:center;
+      margin-bottom:16px; /* Multiples de 8 */
     }
     h2{
       font-size:1.5rem;
       color:#e5e7eb;
-      margin-bottom:18px;
+      margin-bottom:24px;
     }
     h3{
       font-size:1.1rem;
       color:#e5e7eb;
-      margin-bottom:12px;
+      margin-bottom:16px;
     }
 
     /* HERO */
     .hero{
-      text-align:center;
-      padding:36px 20px 40px;
+      padding:48px 32px; /* Aligné avec sections */
       background:radial-gradient(circle at top,#1e293b,#020617);
     }
     .hero p{
@@ -179,8 +178,8 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding:13px 34px;
-      margin:10px auto;
+      padding:16px 32px; /* Padding identique */
+      margin:16px auto;
       border-radius:999px;
       background:
         radial-gradient(circle at 20% 0,rgba(255,255,255,.55),transparent 60%),
@@ -209,17 +208,18 @@
 
     /* SCIENCE */
     .science-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:18px;
-      margin-top:20px;
+      display:flex; /* Changé en flex pour centrage parfait */
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:24px;
+      margin-top:24px;
     }
     .science-link{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding:11px 28px;
+      padding:16px 32px;
       border-radius:999px;
       background:
         radial-gradient(circle at 20% 0,rgba(255,255,255,.45),transparent 60%),
@@ -230,6 +230,7 @@
       box-shadow:0 14px 32px rgba(15,23,42,.95);
       transition:transform .16s,box-shadow .16s,background .16s;
       cursor:pointer;
+      min-width:200px; /* Taille min pour alignement */
     }
     .science-link img{
       width:20px;
@@ -247,19 +248,18 @@
     /* BIENFAITS */
     .bienfaits-grid{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-      margin-top:20px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+      margin-top:24px;
     }
     .bienfait-card{
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      padding:16px 18px 18px;
-      border-radius:20px;
+      padding:24px;
+      border-radius:24px;
       background:rgba(15,23,42,.92);
       border:1px solid rgba(148,163,184,.5);
       box-shadow:0 18px 36px rgba(15,23,42,1);
+      text-align:left; /* Override centrage pour lisibilité */
+      min-height:160px; /* Alignement hauteur */
     }
     .bienfait-title{
       font-weight:600;
@@ -273,36 +273,30 @@
       line-height:1.7;
     }
     .confiance{
-      grid-column:1/-1;
-      max-width:360px;
-      margin:0 auto;
-      width:100%;
+      max-width:none; /* Laisser pleine largeur pour alignement */
     }
 
     /* SIMULATEUR */
     .sim-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
-      margin-top:18px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:32px;
+      margin-top:24px;
     }
     .sim-card{
       background:rgba(15,23,42,.9);
       border-radius:24px;
-      padding:22px 18px 26px;
+      padding:24px;
       border:1px solid rgba(148,163,184,.35);
-      text-align:center;
       box-shadow:0 20px 45px rgba(15,23,42,.95);
+      min-height:320px; /* Alignement hauteur des cartes */
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
     }
     .sim-card .glass-btn{
-      display:flex;
-      width:80%;
-      max-width:230px;
-      margin-top:14px;
-      margin-bottom:12px;
-    }
-    .sim-card .glass-btn:last-child{
-      margin-bottom:0;
+      width:100%;
+      margin:8px 0;
     }
 
     /* VIDEOS */
@@ -310,11 +304,11 @@
       display:flex;
       flex-direction:column;
       gap:16px;
-      margin-top:16px;
+      margin-top:24px;
     }
     .video-toggle{
       width:100%;
-      justify-content:flex-start;
+      justify-content:center;
       padding-inline:24px;
     }
     .video-container{
@@ -325,7 +319,7 @@
       overflow:hidden;
       background:#020617;
       box-shadow:0 22px 50px rgba(15,23,42,.95);
-      margin-top:12px;
+      margin-top:16px;
       display:block;
     }
     .video-container.hidden{
@@ -339,37 +333,10 @@
       border:none;
     }
 
-    /* FORMULAIRE (styles conservés même si plus de form, au cas où) */
-    form{
-      max-width:460px;
-      margin:16px auto 0;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-    }
-    label{
-      font-size:1rem;
-      color:#cbd5f5;
-      display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-      gap:6px;
-    }
-    input,textarea{
-      width:100%;
-      padding:10px 12px;
-      border-radius:10px;
-      border:1px solid rgba(148,163,184,.6);
-      background:rgba(15,23,42,.9);
-      color:#e5e7eb;
-      font-family:Inter,sans-serif;
-      font-size:1rem;
-    }
-    textarea{min-height:90px;resize:vertical}
-    input::placeholder,
-    textarea::placeholder{
-      color:#94a3b8;
-      opacity:1;
+    /* GUIDE / CONTACT */
+    .glass-btn[href^="mailto"]{
+      max-width:400px;
+      margin:24px auto 0;
     }
 
     /* FOOTER */
@@ -377,21 +344,22 @@
       text-align:center;
       color:#64748b;
       font-size:.9rem;
-      padding:18px 0 28px;
+      padding:24px 0 32px;
     }
 
     /* RESPONSIVE */
     @media(max-width:768px){
+      .nav-inner{padding:16px 16px}
       .nav-links{
         position:absolute;
         top:56px;
-        right:12px;
-        left:12px;
+        right:16px;
+        left:16px;
         background:rgba(15,23,42,.98);
         border-radius:16px;
         flex-direction:column;
         align-items:flex-start;
-        padding:14px 16px 10px;
+        padding:16px;
         gap:8px;
         border:1px solid rgba(148,163,184,.4);
         display:none;
@@ -399,20 +367,18 @@
       .nav-links.open{display:flex}
       #burger{display:block}
 
-      main{padding-inline:18px}
-      .glass-section{padding:26px 20px 28px;margin:20px 0}
+      main{padding:24px 16px 48px}
+      .glass-section{padding:32px 24px;margin:24px 0}
 
       .bienfaits-grid{
         grid-template-columns:1fr;
       }
-      .confiance{
-        grid-column:auto;
-        max-width:none;
+      .sim-grid{
+        grid-template-columns:1fr;
       }
-      .sim-card .glass-btn{width:100%}
-      .video-toggle{
-        justify-content:center;
-        text-align:center;
+      .science-grid{
+        flex-direction:column;
+        gap:16px;
       }
     }
   </style>
