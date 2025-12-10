@@ -44,6 +44,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      /* FOND POUR RIPPLES */
       background-image: url('IMG_4991.jpeg'); 
       background-size: cover;
       background-position: center;
@@ -202,6 +203,7 @@
       padding: 16px 32px;
       margin: 16px auto;
       border-radius: 999px;
+      /* DÉGRADÉ UNIFIÉ */
       background:
         radial-gradient(circle at 20% 0, rgba(255, 255, 255, 0.55), transparent 60%),
         linear-gradient(135deg, rgba(125, 211, 252, 0.4), rgba(165, 180, 252, 0.4));
@@ -213,10 +215,26 @@
         inset 0 0 12px rgba(255, 255, 255, 0.25);
       transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
       cursor: pointer;
+      /* Préparation pour l'icône "S" */
+      position: relative; 
+      padding-left: 48px; 
     }
-    .glass-btn img { width: 22px; height: 22px; }
+    .glass-btn::before {
+        /* Logo 'S' sur tous les boutons 'glass-btn' */
+        content: ""; 
+        position: absolute;
+        left: 15px; 
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px; 
+        height: 20px; 
+        background-image: url('glace.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
     .glass-btn:hover {
-      transform: translateY(-2px) scale(1.02);
+      /* Effet 3D plus fort pour inciter au clic */
+      transform: translateY(-4px) scale(1.02); 
       box-shadow:
         0 26px 45px rgba(15, 23, 42, 0.95),
         inset 0 0 16px rgba(255, 255, 255, 0.35);
@@ -233,33 +251,20 @@
     .science-link {
       min-width: 200px;
       padding: 16px 32px;
-      border-radius: 999px;
       background: linear-gradient(135deg, rgba(125, 211, 252, 0.3), rgba(165, 180, 252, 0.3));
       border: 1px solid rgba(148, 163, 184, 0.6);
       box-shadow: 0 14px 32px rgba(15, 23, 42, 0.95);
       transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
-      /* 🎯 NOUVEAU: Ajoute un espace pour l'icône et prépare l'animation */
-      position: relative; 
-      padding-right: 48px; 
-    }
-    .science-link::after { 
-        /* 🎯 NOUVEAU: Flèche indiquant un lien externe */
-        content: "↗"; 
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.2rem;
-        transition: transform 0.2s;
+      padding-right: 32px; 
+      padding-left: 48px; 
     }
     .science-link:hover {
-      /* 🎯 NOUVEAU: Augmentation de l'effet 3D au survol */
-      transform: translateY(-4px); 
       background: linear-gradient(135deg, rgba(125, 211, 252, 0.5), rgba(165, 180, 252, 0.5));
-      box-shadow: 0 24px 50px rgba(15, 23, 42, 1.2); /* Ombre plus forte */
+      box-shadow: 0 24px 50px rgba(15, 23, 42, 1.2); 
     }
-    .science-link:hover::after {
-        transform: translateY(-50%) scale(1.1); /* Petite animation sur l'icône */
+    .science-link::after {
+      /* Supprimer l'ancienne flèche ↗ et laisser .glass-btn::before gérer l'icône "S" */
+      content: none;
     }
 
 
@@ -307,6 +312,8 @@
         background-image: url('glace.png'); 
         background-size: contain;
         background-repeat: no-repeat;
+        /* 🎯 NOUVEAU: Filtre pour améliorer l'éclat du logo sur les cartes */
+        filter: brightness(1.2) drop-shadow(0 0 2px rgba(125, 211, 252, 0.6));
     }
     .bienfait-text {
       color: #cbd5f5;
@@ -389,14 +396,8 @@
     /* RESPONSIVE */
     @media(max-width:768px){
       .nav-inner { padding: 16px; }
-      
-      .bienfaits-grid {
-        grid-template-columns: 1fr;
-      }
-      .confiance {
-        grid-column: 1 / -1;
-      }
-      
+      .bienfaits-grid { grid-template-columns: 1fr; }
+      .confiance { grid-column: 1 / -1; }
       .nav-links {
         position: absolute;
         top: 56px;
