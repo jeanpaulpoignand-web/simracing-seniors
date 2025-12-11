@@ -194,6 +194,78 @@
       color: #cbd5f5;
     }
 
+    /* HERO — volant à gauche, titre, texte, pédalier à droite */
+    .hero-title{
+      text-align:center;
+      margin-bottom:12px;
+    }
+    .hero-title h1{
+      font-size:2rem;
+      line-height:1.2;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns:150px minmax(0,1fr) 150px;
+      align-items:center;
+      column-gap:20px;
+    }
+    .hero-left,
+    .hero-right{
+      position:relative;
+      width:150px;
+      height:150px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .hero-middle{
+      text-align:center;
+      padding:0 8px;
+    }
+    .hero-middle p{
+      max-width:360px;
+      margin:0 auto;
+      color:#cbd5f5;
+      line-height:1.6;
+      font-size:0.98rem;
+    }
+    .hero-blob-bg{
+      position:absolute;
+      inset:0;
+      border-radius:999px;
+      background:
+        radial-gradient(circle at 20% 0,rgba(255,255,255,.65),transparent 60%),
+        linear-gradient(135deg,rgba(125,211,252,.45),rgba(165,180,252,.45));
+      box-shadow:0 18px 40px rgba(15,23,42,.95),0 0 14px rgba(125,211,252,.55);
+      filter:blur(.25px);
+      mix-blend-mode:screen;
+      opacity:.96;
+    }
+    .hero-svg{
+      position:relative;
+      width:115px;
+      height:115px;
+    }
+    .hero-svg svg{
+      width:100%;
+      height:100%;
+      display:block;
+    }
+    .hero-wheel{
+      stroke:#7dd3fc;
+      fill:rgba(15,23,42,.96);
+    }
+    .hero-wheel-detail{
+      stroke:#a5b4fc;
+    }
+    .hero-pedals{
+      stroke:#7dd3fc;
+      fill:rgba(15,23,42,.98);
+    }
+    .hero-pedals-detail{
+      stroke:#a5b4fc;
+    }
+
     /* BOUTONS GENERAUX ET LIENS EXTERNES */
     .glass-btn {
       display: inline-flex;
@@ -265,7 +337,6 @@
     .science-link::after {
       content: none;
     }
-
 
     /* BIENFAITS - SYMETRIE 2x2 et LOGO */
     .bienfaits-grid {
@@ -440,9 +511,64 @@
 </nav>
 
 <main>
+  <!-- HERO MODIFIÉ : titre + volant + texte + pédalier -->
   <section class="glass-section hero">
-    <h1>Le Sim Racing après 60 ans</h1>
-    <p>Stimulez votre mémoire, vos réflexes et votre concentration grâce au simulateur automobile, dans le confort de votre salon.</p>
+    <div class="hero-title">
+      <h1>Le Sim Racing après 60 ans</h1>
+    </div>
+    <div class="hero-inner">
+      <!-- Volant à gauche -->
+      <div class="hero-left" aria-hidden="true">
+        <div class="hero-blob-bg"></div>
+        <div class="hero-svg">
+          <svg viewBox="0 0 220 220">
+            <g transform="translate(110,110)">
+              <!-- cercle extérieur -->
+              <circle class="hero-wheel" cx="0" cy="0" r="48" stroke-width="4"/>
+              <!-- méplat bas style GT/rallye -->
+              <path class="hero-wheel" d="M -42 16 Q 0 30 42 16" stroke-width="4" fill="none"/>
+              <!-- centre -->
+              <circle class="hero-wheel-detail" cx="0" cy="0" r="14" stroke-width="3" fill="none"/>
+              <!-- branches -->
+              <line class="hero-wheel-detail" x1="0" y1="-14" x2="0" y2="-32" stroke-width="3"/>
+              <line class="hero-wheel-detail" x1="-14" y1="5" x2="-32" y2="15" stroke-width="3"/>
+              <line class="hero-wheel-detail" x1="14" y1="5" x2="32" y2="15" stroke-width="3"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Texte au centre -->
+      <div class="hero-middle">
+        <p>
+          Stimulez votre mémoire, vos réflexes et votre concentration grâce au simulateur automobile,
+          dans le confort de votre salon.
+        </p>
+      </div>
+
+      <!-- Pédalier à droite -->
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-blob-bg"></div>
+        <div class="hero-svg">
+          <svg viewBox="0 0 220 220">
+            <g transform="translate(110,110)">
+              <!-- base -->
+              <rect class="hero-pedals" x="-38" y="20" width="76" height="10" rx="4" stroke-width="3"/>
+              <!-- pédale gauche -->
+              <rect class="hero-pedals" x="-30" y="-6" width="14" height="30" rx="3" stroke-width="3"/>
+              <!-- pédale centre -->
+              <rect class="hero-pedals" x="-4"  y="-14" width="14" height="38" rx="3" stroke-width="3"/>
+              <!-- pédale droite -->
+              <rect class="hero-pedals" x="22"  y="-2"  width="14" height="28" rx="3" stroke-width="3"/>
+              <!-- détails -->
+              <line class="hero-pedals-detail" x1="-30" y1="2" x2="-18" y2="2" stroke-width="2"/>
+              <line class="hero-pedals-detail" x1="-4"  y1="-4" x2="8"   y2="-4" stroke-width="2"/>
+              <line class="hero-pedals-detail" x1="22"  y1="4"  x2="34"  y2="4"  stroke-width="2"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="science" class="glass-section">
