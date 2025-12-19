@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jeanpaulpoignan-web.github.io/simracing-seniors/sitemap.xml
+Sitemap: https://jeanpaulpoignand-web.github.io/simracing-seniors/sitemap.xml
